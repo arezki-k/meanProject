@@ -1,0 +1,60 @@
+<div>
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="Produits">
+        <h2>Produits</h2>
+        <hr />
+        <div *ngIf="produits">
+          <div class="row">
+            <div
+              *ngFor="
+                let produit of produits
+                  | paginate: { itemsPerPage: selectedNumber, currentPage: p }
+              "
+              class="col-md-4"
+            >
+              <div class="card mb-4 box-shadow" style="height: 100%">
+                <img
+                  class="card-img-top"
+                  src="{{ produit.image }}"
+                  alt="Card image cap"
+                  height="300rem"
+                />
+                <div class="card-body text-center">
+                  <h5 class="card-title">
+                    {{ produit.brand }} {{ produit.model }}
+                  </h5>
+
+                  <div class="row"></div>
+                  <button
+                    *ngIf="user | async"
+                    type="button"
+                    class="btn btn-dark btn-lg btn-block"
+                  >
+                    Ajouter au panier
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-dark btn-lg btn-block"
+                    (click)="getProduitDetail(produit)"
+                  >
+                    <a>Details</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <pagination-controls
+        *ngIf="produits.length != 0"
+        maxSize="10"
+        (pageChange)="p = $event"
+        responsive="true"
+        previousLabel="Précédent"
+        nextLabel="Suivant"
+      >
+      </pagination-controls>
+    </div>
+  </div>
+</div>
