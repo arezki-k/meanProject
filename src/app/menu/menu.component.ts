@@ -6,24 +6,24 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent implements OnInit {
+  user: Observable<string>;
 
-  user: Observable <string>;
-
-  constructor(private authentification: AuthentificationService,
-              private router: Router) {
+  constructor(
+    private authentification: AuthentificationService,
+    private router: Router
+  ) {
     this.user = this.authentification.getUser();
-    console.log('user: **********'+this.authentification.getUser());
+    // console.log('user: **********'+this.authentification.getUser());
   }
   ngOnInit(): void {
     this.router.navigate(['/produits']);
-    console.log('user: **********'+this.authentification.getUser());
+    //console.log('user: **********'+this.authentification.getUser());
   }
-  disconnect(){
+  disconnect() {
     this.authentification.disconnect();
     this.router.navigate(['/produits']);
-
   }
 }

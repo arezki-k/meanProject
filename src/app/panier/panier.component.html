@@ -1,0 +1,58 @@
+<!--Grid row-->
+<div class="row" class="container-fluid">
+  <!--Grid column-->
+  <div class="col-lg-8">
+    <!-- Card -->
+    <div class="mb-3">
+      <div class="pt-4 wish-list">
+        <h5 class="mb-4"><strong>Panier</strong></h5>
+
+        <div *ngFor="let panier of panier" class="row mb-4">
+          <div class="col-md-5 col-lg-3 col-xl-3">
+            <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+              <img
+                class="img-fluid w-100"
+                src="{{ panier.image }}"
+                alt="Sample"
+              />
+            </div>
+          </div>
+          <div class="col-md-7 col-lg-9 col-xl-9">
+            <div>
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5>Marque: {{ panier.brand }}</h5>
+                  <p class="mb-3 text-muted text-uppercase small">
+                    Modèle: {{ panier.model }}
+                  </p>
+                  <p class="mb-2 text-muted text-uppercase small">
+                    Categorie: {{ panier.category }}
+                  </p>
+                  <p class="mb-2 text-muted text-uppercase small">
+                    Utilisateur: {{ panier.email }}
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <form class="d-flex justify-content-left">
+                    <button
+                      class="btn btn-danger btn-md my-0 p"
+                      type="submit"
+                      (click)="supprimer(panier.id)"
+                    >
+                      Supprimer
+
+                      <i class="fas fa-shopping-cart ml-1"></i>
+                    </button>
+                  </form>
+                </div>
+                <p>Prix: {{ panier.price }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

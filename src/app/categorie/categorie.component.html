@@ -1,8 +1,12 @@
 <div>
-    <p class="card-header mx-auto"> Decouvrez nos differentes catégories de vélo : </p>
-    <div class="card-body">
-        <div *ngFor="let categorie of categories" class="card">
-            <p class="card-text mx-auto" (click)="produitsParCategorie(categorie)"> {{ categorie }}</p>
-        </div>
+  <p class="card-header mx-auto">
+    Decouvrez nos differentes catégories de vélo :
+  </p>
+  <div class="card-body">
+    <div *ngFor="let categorie of categories" class="card">
+      <p class="card-text mx-auto" (click)="produitsParCategorie(categorie)">
+        {{ categorie }}
+      </p>
     </div>
+  </div>
 </div>

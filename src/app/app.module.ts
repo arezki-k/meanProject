@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
-import { NgxPaginationModule } from "ngx-pagination";
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
 //services
 import { ProduitsService } from './produits.service';
 import { AppRoutingModule } from './app-routing.module';
-import { AuthentificationService} from './authentification.service';
-import { ProduitService } from "./produit.service";
+import { AuthentificationService } from './authentification.service';
+import { ProduitService } from './produit.service';
 
 //modules
 import { AppComponent } from './app.component';
@@ -19,9 +19,6 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { PanierComponent } from './panier/panier.component';
 import { ProduitComponent } from './produit/produit.component';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,16 +28,16 @@ import { ProduitComponent } from './produit/produit.component';
     CategorieComponent,
     InscriptionComponent,
     PanierComponent,
-    ProduitComponent
+    ProduitComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
   ],
   providers: [ProduitsService, AuthentificationService, ProduitService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

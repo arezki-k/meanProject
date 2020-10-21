@@ -1,3 +1,4 @@
+import { PanierComponent } from './panier/panier.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProduitsComponent } from './produits/produits.component';
@@ -8,35 +9,43 @@ import { MenuComponent } from './menu/menu.component';
 import { ProduitComponent } from './produit/produit.component';
 
 const routes: Routes = [
-{
-  path : 'produits', component: ProduitsComponent
-},
-{
-  path : 'connexion', component : ConnexionComponent
-},
-{
-  path : 'inscription', component : InscriptionComponent
-},
-{
-  path : 'categorie', component : CategorieComponent
-},
-{
-  path : 'produits/:categorie', component : ProduitsComponent
-},
-{
-  path : 'produit', component : ProduitComponent
-},
+  {
+    path: 'produits',
+    component: ProduitsComponent,
+  },
+  {
+    path: 'connexion',
+    component: ConnexionComponent,
+  },
+  {
+    path: 'inscription',
+    component: InscriptionComponent,
+  },
+  {
+    path: 'categorie',
+    component: CategorieComponent,
+  },
+  {
+    path: 'produits/:categorie',
+    component: ProduitsComponent,
+  },
+  {
+    path: 'produit',
+    component: ProduitComponent,
+  },
 
-{
-  path : 'menu', component : MenuComponent
-},
-{
-  path : 'panier', component : MenuComponent
-}
+  {
+    path: 'menu',
+    component: MenuComponent,
+  },
+  {
+    path: 'panier',
+    component: PanierComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
