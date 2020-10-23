@@ -1,0 +1,19 @@
+[{
+        "nom": "Dubois",
+        "prenom": "Raphael",
+        "email": "dubois.raphael@gmail.com",
+        "password": "ohlala"
+    },
+    {
+        "nom": "Cabanel",
+        "prenom": "Phillipe",
+        "email": "cabanel.phillipe@gmail.com",
+        "password": "ohlala"
+    },
+    {
+        "nom": "Clairevoix",
+        "prenom": "Micheline",
+        "email": "clairevoix.micheline@gmail.com",
+        "password": "ohlala"
+    }
+]

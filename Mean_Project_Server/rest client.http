@@ -1,0 +1,39 @@
+POST http://localhost:8000/membres/inscription HTTP/1.1
+content-type: application/json
+
+{  
+    "email":"arezki.kacioui@gmail.com",
+    "password":"123456"
+}
+
+###
+
+GET http://localhost:8000/produits HTTP/1.1
+
+###
+GET http://localhost:8000/produits/categories HTTP/1.1
+
+###
+GET http://localhost:8000/categorie HTTP/1.1
+
+
+###
+POST http://localhost:8000/panier HTTP/1.1
+Content-Type: application/json
+
+{
+        "email":"arezki.kacioui@gmail.com",
+        "brand" : "Decathlon",
+        "model" : "E-ST 520",
+        "price" : 1699,
+        "category" : "vae",
+        "image" : "https://contents.mediadecathlon.com/p1863843/k$4e96b5b30b0a5491797117449f58c5ba/sq/V+LO+VTT+LECTRIQUE+E+ST+520+GRIS+JAUNE+27+5.webp?f=700x700",
+        "description" : " Ce VTT électrique (VTTAE) 27,5 est conçu pour les randonnées VTT en montagne. Avec ce VTT électrique (VTTAE) E-ST 520, gravissez les montagnes grâce son moteur central coupleux (70 Nm). "
+}
+
+###
+GET http://localhost:8000/panier/arezki.kacioui@gmail.com HTTP/1.1
+
+
+###
+GET http://localhost:8000/panier/supprimer/2vo7izjuw HTTP/1.1

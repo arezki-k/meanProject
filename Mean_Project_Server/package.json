@@ -1,0 +1,21 @@
+{
+  "name": "mean-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "serveur.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.5",
+    "bootstrap": "^4.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node serveur.js",
+    "devStart": "nodemon serveur.js"
+  },
+  "author": "arezki kacioui",
+  "license": "ISC"
+}
